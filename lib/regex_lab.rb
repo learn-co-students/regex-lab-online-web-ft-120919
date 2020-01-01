@@ -3,15 +3,15 @@ def starts_with_a_vowel?(word)
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
-    # text.scan(/^un+ing/)
-    array = []
-    a = text.split(" ")
-    a.each { |a| 
-        if a[0..1] == "un" && a[-3..-1] == "ing"
-            array << a 
-        end
-    } 
-    array
+    text.scan(/\bun\w*ing\b/)
+    # array = []
+    # a = text.split(" ")
+    # a.each { |a| 
+    #     if a[0..1] == "un" && a[-3..-1] == "ing"
+    #         array << a 
+    #     end
+    # } 
+    # array
 end
 
 def words_five_letters_long(text)
